@@ -128,4 +128,10 @@ $(function () {
   if ($(window).width() < 769) {
     $("#mainhead").removeClass("animated fadeInDown");
   }
+  // Reset All forms and values
+  $(".side-filters header button").on("click", function () {
+    $(".side-filters form").trigger("reset");
+    $("#product-color-form ul li").remove();
+    $("#product-color-form label").removeClass("selected");
+  });
 });
