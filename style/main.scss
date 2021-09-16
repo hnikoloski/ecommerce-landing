@@ -1,0 +1,23 @@
+// Setup
+html {
+  font-size: 0.0077vw !important;
+  font-family: "SF Pro Display";
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100% !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@import "./fonts/fonts.scss";
+@import "./helpers/style-setup";
+@import "./helpers/resets.scss";
+@import "./helpers/helpers.scss";
+@import "./helpers/variables.scss";
+@import "./helpers/typography.scss";
+@import "./helpers/animations";
+@import "./partials/preloader";
+@import "./partials/header";
+@import "./partials/hero";
+@import "./partials/footer";
+@import "./partials/product-archive";
+@import "./components/product-card";
+@import "./components/multy-slider";

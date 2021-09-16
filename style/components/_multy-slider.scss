@@ -1,0 +1,83 @@
+.middle {
+  position: relative;
+  width: 100%;
+  margin-bottom: 135.2823rem;
+}
+.slider {
+  position: relative;
+  z-index: 1;
+  height: 40.58469rem;
+  margin: 0;
+  > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+  }
+  > .range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #1a202c;
+  }
+  > .thumb {
+    position: absolute;
+    z-index: 3;
+    width: 216.451681rem;
+    height: 216.451681rem;
+    background-color: #1a202c;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(26, 32, 44, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    @include ver-center();
+  }
+  > .thumb.left {
+    left: 25%;
+    transform: translate(-101.461725rem, -50%);
+  }
+  > .thumb.right {
+    right: 25%;
+    transform: translate(101.461725rem, -50%);
+  }
+  > .thumb.hover {
+    box-shadow: 0 0 0 20.292345rem rgba(26, 32, 44, 0.2);
+  }
+  > .thumb.active {
+    box-shadow: 0 0 0 33.820575rem rgba(26, 32, 44, 0.2);
+  }
+}
+input[type="range"] {
+  position: absolute;
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 2;
+  height: 67.64115rem;
+  width: 100%;
+  opacity: 0;
+  &::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 216.451681rem;
+    height: 216.451681rem;
+    border-radius: 0;
+    border: 0 none;
+    background-color: #1a202c;
+    -webkit-appearance: none;
+  }
+}
+@media (max-width: 425px) {
+  .slider {
+    height: 100rem;
+    > .thumb {
+      width: 450rem;
+      height: 450rem;
+    }
+  }
+}

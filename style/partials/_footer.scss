@@ -1,0 +1,99 @@
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: space-between;
+  align-items: center;
+  height: 676.411502rem;
+  border-top: 1px solid #e0e0e0;
+  .declaration {
+    background: #0065db;
+    width: 3639.093879rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 202.923451rem;
+    -moz-border-top-right-radius: 202.923451rem;
+    -webkit-border-top-right-radius: 202.923451rem;
+    p {
+      color: #fff;
+      font-size: 189.39522rem;
+      font-weight: $bold;
+    }
+  }
+  .slick-slider {
+    width: calc(100% - 3639.093879rem);
+    z-index: 9;
+    padding: 0 568.185661rem;
+    .slick-arrow {
+      z-index: 99;
+      position: absolute;
+      @include ver-center();
+      width: 324.677521rem;
+      height: 324.677521rem;
+      line-height: 324.677521rem;
+      text-align: center;
+      font-size: 81.16938rem;
+      border: 1px solid #000000;
+      color: #000;
+      @include borderRadius(50%);
+      transition: 0.1s;
+
+      &.slick-prev {
+        left: 202.923451rem;
+      }
+      &.slick-next {
+        right: 202.923451rem;
+      }
+      &:hover {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        background: #000;
+        color: #fff;
+      }
+    }
+    .single-slide {
+      .img-wrapper {
+        width: 100%;
+        height: 405.846901rem;
+        display: block;
+        img {
+          width: 100%;
+          height: 100%;
+          @include fullSizeImg(contain);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .site-footer {
+    height: auto;
+    .declaration {
+      width: 100%;
+      @include borderRadius(0);
+      height: 1600rem;
+      margin-bottom: 300rem;
+      p {
+        font-size: 550rem;
+      }
+    }
+    .slick-slider {
+      width: 100%;
+      padding: 0 1050rem;
+      margin-bottom: 300rem;
+      .slick-arrow {
+        width: 650rem;
+        height: 650rem;
+        font-size: 450rem;
+        line-height: 650rem;
+      }
+      .single-slide {
+        .img-wrapper {
+          height: 2500rem;
+        }
+      }
+    }
+  }
+}
